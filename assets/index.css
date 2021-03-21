@@ -28,9 +28,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .content{
+    padding: 10px;
     align-self: center;
     background-color: #dbdbdb;
-    padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
     background-image: url(imgs/folha-amassada1.jpg);
@@ -65,9 +65,15 @@ h1, h2, h3, h4, h5, h6{
     cursor: pointer;
 }
 
+.content section:nth-child(2) h2{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+
+}
+
 .content p{
     font-size: 1.2em;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
     color: blanchedalmond;
 }
 
@@ -80,6 +86,7 @@ h1, h2, h3, h4, h5, h6{
     color: #E0AA3E;  
     text-align: center;
     font-size: 3em;
+    margin-top: 3vh;
     margin-bottom: 3vh;
 }
 .content h2{
@@ -105,6 +112,14 @@ h1, h2, h3, h4, h5, h6{
     margin-bottom: 0.5vh;
     
 }
+.content article section:nth-child(1){
+    text-align: center;
+}
+
+.content article section:nth-child(2){
+    margin-bottom: 4vh;
+}
+
 .pratos{
     margin-top: 2vh;
 }
@@ -119,10 +134,12 @@ h1, h2, h3, h4, h5, h6{
 .pratos div a{
     position: absolute;
     font-size: 2em;
+    font-weight: 550;
+    text-shadow: 2px 2px 6px rgba(150, 150, 150, 1);
     opacity: 100;
     color:antiquewhite;
-    background-color: rgba(0, 0, 0, 0.473);
-    border: 3px solid antiquewhite;
+    font-family: 'Parisienne', cursive;
+    /* background-color: rgba(0, 0, 0, 0.377); */
     text-decoration: none;
     border-radius: 10px;
     padding: 5px 10px;
