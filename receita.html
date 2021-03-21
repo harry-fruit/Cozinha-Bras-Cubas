@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/index.css">
+    <script src="https://kit.fontawesome.com/279cbdbb56.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/prato.svg" type="image/x-icon">
+    <title>Home</title>
+</head>
+<body>
+
+    <div>
+        <div id="left" class="left">
+            <section id="sideContent" class="aside">
+                <i id="close" class="far fa-times-circle fa-2x close"></i>
+                <div class="profilePic">
+                    
+                </div>
+                <div class="standard">
+                    <h2>• Chefe Brás Cubas</h2>
+                    <blockquote>
+                        " <i>Com grandes poderes, vem grandes responsabilidades</i> " 
+                    </blockquote>
+                </div>
+                <nav id="navSide"class="navSide">
+                    <a href="index.html" class="button"> <i class="fas fa-home"></i> Home </a>
+                    <a href="receita.html" class="button"><i class="fas fa-receipt"></i> Receita</a>
+                    <a href="video.html" class="button"> <i class="fas fa-video"></i> Vídeo</a>
+                    <a href="contato.html" class="button"> <i class="fas fa-phone-alt"></i> Contato</a>
+                </nav>
+                <footer>  
+                    <div id="social" class="social">
+                        <a href="https://www.linkedin.com/in/isaque-duarte-moreira-578697191/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://www.instagram.com/isaq.js/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </div>
+                    <h3>Isaque Duarte, 2021 &copy;</h3>
+                </footer>
+            </section>
+        </div>
+        <div id="right" class="right">
+            <header>
+                <i id="iconSide"class="fas fa-align-justify fa-2x"></i>
+                <a href="index.html"><img src="assets/prato.svg" alt="#PRACEGOLER: Logotipo do restaurante Brás Cubas que possui uma colher e um garfo em cima de um prato"></a>
+                <h1><a href="index.html"> Cozinha Brás Cubas</a></h1>
+            </header>
+
+            <main class="mainContent">
+            </main>
+
+        </div>
+    </div>
+    <script>
+
+        const funcs = {
+            Open(){
+                const body = document.querySelector('body')
+                const left = document.querySelector('#left')
+                const right = document.querySelector('#right')
+
+                body.style.overflowX= 'hidden'
+                left.style.transition = 'all 0.5s'
+                right.style.transition = 'all 0.5s'
+                right.style.position = 'fixed'
+                
+                if(window.outerWidth < 700){
+                    left.style.left = '0%'
+                    left.style.width = '100%'
+                    right.style.left = '100%'
+                    
+                }else{
+                    left.style.left = '0%'
+                    left.style.width = '30%'
+                    right.style.left = '30%'
+                } 
+            },
+
+            close(){
+                const body = document.querySelector('body')
+                const left = document.querySelector('#left')
+                const right = document.querySelector('#right')
+                
+                left.style.transition = 'all 0.5s'
+                right.style.transition = 'all 0.5s'
+                right.style.left = '0%'
+
+                setTimeout(()=>{
+                    right.style.position = 'absolute'
+                }, 500)
+                
+                if(window.outerWidth < 700){
+                    left.style.left = '-100%'
+                }else{
+                    left.style.left = '-30%'
+                } 
+                body.style.overflow = 'initial'
+            }
+        }
+
+        const fechar = funcs.close
+        const abrir = funcs.Open
+
+        const getOpen = document.querySelector('#iconSide')
+        const getClosed = document.querySelector('#close')
+        getOpen.onclick = e => abrir()
+        getClosed.onclick = e => fechar()
+        
+    </script>
+</body>
+</html>
