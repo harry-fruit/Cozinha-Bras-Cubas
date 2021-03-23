@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/contato.css">
+    <link rel="stylesheet" href="assets/style/base.css">
+    <script src="https://kit.fontawesome.com/279cbdbb56.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/imgs/prato.svg" type="image/x-icon">
+    <script src="teste.js" type="text/javascript"></script>
+    <title>Home</title>
+</head>
+<body>
+
+    <div>
+        <div id="left" class="left">
+            <section id="sideContent" class="aside">
+                <i id="close" class="far fa-times-circle fa-2x close"></i>
+                <div class="profilePic">
+                    
+                </div>
+                <div class="standard">
+                    <h2> Chefe Brás Cubas</h2>
+                    <blockquote>
+                        " Com grandes poderes, vem grandes responsabilidades." 
+                    </blockquote>
+                </div>
+                <nav id="navSide"class="navSide">
+                    <a href="index.html" class="button"> <i class="fas fa-home"></i> Home </a>
+                    <a href="receita.html" class="button"><i class="fas fa-receipt"></i> Receita</a>
+                    <a href="video.html" class="button"> <i class="fas fa-video"></i> Vídeo</a>
+                    <a href="contato.html" class="button"> <i class="fas fa-phone-alt"></i> Contato</a>
+                </nav>
+                <footer>  
+                    <div id="social" class="social">
+                        <a href="https://www.linkedin.com/in/isaque-duarte-moreira-578697191/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://www.instagram.com/isaq.js/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                    </div>
+                    <h3>Isaque Duarte, 2021 &copy;</h3>
+                </footer>
+            </section>
+        </div>
+        <div id="right" class="right">
+            <header>
+                <i id="iconSide"class="fas fa-align-justify fa-2x"></i>
+                <a href="index.html"><img src="assets/imgs/prato.svg" alt="#PRACEGOVER: Logotipo do restaurante Brás Cubas que possui uma colher e um garfo em cima de um prato"></a>
+                <h1><a href="index.html"> Cozinha Brás Cubas</a></h1>
+            </header>
+
+            <main class="mainContent">
+                <section class="content">
+                    <h3>Entre em contato</h3>
+                    <div class="geral">
+                        <section class="esq">
+                            <form action="" method="post">
+                                <label class="label1"for="nome">Nome</label>
+                                <input class="input1"type="text" name="nome" id="nome" required placeholder="João Silva">
+                                
+                                <label class="label1"for="email">E-Mail</label>
+                                <input class="input1" type="email" name="email" id="email" placeholder="joaosilva@yahoo.com" required>
+                                
+                                <label class="label1"for="telefone">Telefone</label>
+                                <input class="input1" type="tel" placeholder="(xx) xxxx-xxxx" maxlength="10" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" name="telefone" id="telefone">
+    
+                                <label class="label1"for="celular">Celular</label>
+                                <input class="input1" type="tel" placeholder="(xx) xxxxx-xxxx" maxlength="11" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" name="celular" id="celular" required>
+
+                                <h4>Como nos conheceu?</h4>
+                                <div class="radio">
+                                    <div>
+                                        <input type="radio" name="conheceu" id="internet" value="internet">
+                                        <label for="internet">Internet</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="conheceu" id="amigos" value="amigos">
+                                        <label for="amigos">Amigos</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="conheceu" id="familia" value="familia">
+                                        <label for="familia">Familia</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="conheceu" id="redesocial" value="redesocial">
+                                        <label for="redesocial">Rede Social</label>
+                                    </div>
+                                </div>
+
+                                <a class="send" href="">Enviar</a>
+                                
+                                
+                            </form>
+                        </section>
+                        
+                        <section class="dir">
+                            <h4>Entre em contato conosco!</h4>
+                            
+                            <p><mark>Email:</mark> cozinhabrascubas@gmail.com</p>
+                            <p><mark>Telefone:</mark> (11) 2784-6969</p>
+                        </section>
+
+                    </div>
+                    </section>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    <script>
+        //Funções ASIDE BAR
+        const funcs = {
+            Open(){
+                const body = document.querySelector('body')
+                const left = document.querySelector('#left')
+                const right = document.querySelector('#right')
+
+                body.style.overflowX= 'hidden'
+                left.style.transition = 'all 0.5s'
+                right.style.transition = 'all 0.5s'
+                right.style.position = 'fixed'
+                
+                if(window.outerWidth < 700){
+                    left.style.left = '0%'
+                    left.style.width = '100%'
+                    right.style.left = '100%'
+                    
+                }else{
+                    left.style.left = '0%'
+                    left.style.width = '30%'
+                    right.style.left = '30%'
+                } 
+            },
+
+            close(){
+                const body = document.querySelector('body')
+                const left = document.querySelector('#left')
+                const right = document.querySelector('#right')
+                
+                left.style.transition = 'all 0.5s'
+                right.style.transition = 'all 0.5s'
+                right.style.left = '0%'
+
+                setTimeout(()=>{
+                    right.style.position = 'absolute'
+                }, 500)
+                
+                if(window.outerWidth < 700){
+                    left.style.left = '-100%'
+                }else{
+                    left.style.left = '-30%'
+                } 
+                body.style.overflow = 'initial'
+            }
+        }
+     
+       //Aside 
+        const getOpen = document.querySelector('#iconSide')
+        const getClosed = document.querySelector('#close')
+        getOpen.onclick = e => abrir()
+        getClosed.onclick = e => fechar()
+        
+        const fechar = funcs.close
+        const abrir = funcs.Open
+        </script>
+</body>
+</html>

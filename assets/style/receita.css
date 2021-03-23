@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+
+.content{
+    margin-top: 4vh;
+    background-color:  #964b00;
+    background-image: url(../imgs/folha-amassada1.jpg);
+}
+.content > h3{
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Parisienne', cursive;
+    color: #E0AA3E;
+    border:  2px solid #E0AA3E;
+    border-radius: 10px;
+    margin-bottom: 3vh;
+}
+
+.content h5{
+    font-size:1.1em ;
+}
+
+.content article{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 8vw;
+    margin-bottom:4vh;
+}
+
+.content .receita{
+    padding: 0px 15px 15px 15px;
+}
+
+.content ul{
+    list-style-type:square;
+    margin-bottom: 2vh;
+    padding-left: 10px;
+}
+
+.content ol{
+    padding-left: 10px;
+    list-style-type: upper-roman;
+    margin-bottom: 2vh;
+}
+
+
+.content .receita h5{
+    margin-top: 2vh;
+    margin-bottom: 1.5vh;
+}
+
+.content .receita audio{
+    padding: 0;
+    margin-left: -1vh;
+}
+
+.content .paoDeQueijo{
+    align-self: center;
+}
+
+.content .paoDeQueijo img{
+    max-width: 400px;
+    width: 100%;
+    min-width: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .paoDeQueijo figcaption{
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    text-decoration-color: #E0AA3E;
+    text-decoration:underline;
+    font-size: 1.2em;
+}
+
+.content h4, h5{
+    color: #E0AA3E;
+}
+
+.content h4{
+    font-size: 1.5em;
+}
+
+.content{
+    color: blanchedalmond;
+}
+
+
+@media (max-width:1071px){
+    .content .receita audio{
+        padding: 0;
+        width: 100%;
+    }
+
+    .content article{
+        gap: 5vw;
+    }
+}
+
+
+

@@ -1,0 +1,135 @@
+.content{
+    margin-top: 4vh;
+    background-color:  #964b00;
+    background-image: url(../imgs/folha-amassada1.jpg);
+}
+
+h4{
+    font-weight: bold;
+    font-size: 1.7em;
+    font-family: 'Parisienne', cursive;
+
+
+}
+
+.content > h3{
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Parisienne', cursive;
+    color: #E0AA3E;
+    border:  2px solid #E0AA3E;
+    border-radius: 10px;
+    margin-bottom: 3vh;
+}
+
+.content .geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+
+.content .dir{
+    width: calc(100% + 40px);
+    background-color: rgba(137, 43, 226, 0.493);
+    text-align: center;
+    padding: 15px;
+}
+
+.content .dir h4{
+    text-shadow: 2px 2px 6px rgb(0, 0, 0);
+    font-weight: bold;
+    color: #E0AA3E;
+}
+
+.content .dir p{
+    color: antiquewhite;
+}
+
+.content .dir mark{
+    background-color:transparent;
+    color: antiquewhite;
+    font-weight: 5500;
+}
+
+.content .esq{
+    margin-bottom: 8vh;
+    width: 40vw;
+}
+.content .esq form{
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(250, 235, 215, 0.800);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+form .label1{
+    align-self: center;
+    font-size: 1.2em;
+}
+
+form .input1{
+    font-size: 1em;
+    align-self: center;
+    width: 80%;
+    height: 40px;
+    text-align: center;
+}
+
+form .radio{
+    display: flex;
+    flex-direction: column;
+}
+
+.esq h4{
+    margin-top: 2vh;
+    align-self: center;
+}
+.esq .radio{
+    align-self: center;
+}
+
+.esq .send{
+    margin-top: 2vh;
+    align-self: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4em;
+    color: antiquewhite;
+    background-color: #3b2a22d2;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 100px;
+    padding: 10px;
+}
+
+.esq .send:hover{
+    transition: all 0.5s;
+    background-color: white;
+    color: #E0AA3E;
+}
+
+@media(max-width:700px){
+    .content > h3{
+        font-size: 2.5em;
+        margin-bottom: 0vh;
+    }
+
+    .esq .send{
+        font-size: 1.2em;
+        margin-top: 3vh;
+        padding: 5px;
+    }
+
+    .content .esq{
+        margin-bottom: 8vh;
+        width: 95%;
+    }
+}
+
